@@ -1,11 +1,15 @@
 ---
-title: "audrey-longan-portfolio"
+title: "Audrey Longan"
+about:
+  template: jolla
+  image: profile_pic.jpg
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: www.linkedin.com/in/audrey-grace-longan-
+    - icon: github
+      text: Github
+      href: https://github.com/alongan
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Audrey Longan is an Undergraduate Student of Environmental Science, Technology, and Policy and an undergraduate researcher at California State University, Monterey Bay.
