@@ -1,21 +1,23 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "audrey-longan-portfolio"
+  title: "Audrey Longan's e-Portfolio"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      - href: about.qmd
+        text: "About Me"
 
 format:
   html:
     theme:
-      - cosmo
+      - yeti
       - brand
     css: styles.css
     toc: true
 
-editor: visual
+editor: source
 
