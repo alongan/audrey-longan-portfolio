@@ -2,15 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Audrey Longan">
-<meta name="dcterms.date" content="2026-03-17">
 
-<title>Final Project: Part 1 – Audrey Longan’s e-Portfolio</title>
+<title>Honors Capstone Data Exploration – Audrey Longan’s e-Portfolio</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -25,24 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-980b7731fb1d77f0b19a7f8959812838.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b5cdc83d754cd650109f5c2e0467249f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -82,9 +82,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Audrey Longan’s e-Portfolio</span>
     </a>
   </div>
@@ -95,12 +93,16 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../Final_Project/Final_Project.html" aria-current="page"> 
+<span class="menu-text">Project: STAT 210 Class Example</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -119,8 +121,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#data-description" id="toc-data-description" class="nav-link active" data-scroll-target="#data-description">Data Description</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
-  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#visualization-1-abundance-of-different-species-across-sites" id="toc-visualization-1-abundance-of-different-species-across-sites" class="nav-link" data-scroll-target="#visualization-1-abundance-of-different-species-across-sites">Visualization 1: Abundance of Different Species across Sites</a></li>
+  <li><a href="#visualization-2-correlogram-of-important-variables-against-each-other" id="toc-visualization-2-correlogram-of-important-variables-against-each-other" class="nav-link" data-scroll-target="#visualization-2-correlogram-of-important-variables-against-each-other">Visualization 2: Correlogram of important variables against each other</a></li>
   </ul>
 </nav>
     </div>
@@ -129,26 +131,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Final Project: Part 1</h1>
+<h1 class="title">Honors Capstone Data Exploration</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Audrey Longan </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -160,171 +150,116 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-description" class="level1">
 <h1>Data Description</h1>
-<ol type="1">
-<li>Identify your data source.</li>
-</ol>
-<blockquote class="blockquote">
-<p>My honors capstone data will be used for this project, that I have collected from the spring of 2025 until the end of fall 2025.</p>
-</blockquote>
-<ol start="2" type="1">
-<li>Describe your data, including variables and data types.</li>
-</ol>
-<blockquote class="blockquote">
+<p>My <strong>Honors Capstone data</strong> on the distribution and diversity of macrophytes (aquatic plants) in the Carmel River Watershed will be used for this project. I collected this data from the spring of 2025 until the end of fall 2025. I also joined additional variables from the <a href="https://www.epa.gov/national-aquatic-resource-surveys/streamcat-dataset">EPA’s StreamCat dataset</a> (Hill et al.&nbsp;2016) which are variable means for each smaller watershed in the Carmel River Watershed area. If you would like to know more about my findings, please check out my <a href="https://docs.google.com/presentation/d/1qyguPcPeW0xp4K8_dk5CdjECijCWCKajkX6ZEUmw0hg/edit?usp=sharing">Final Honors Capstone Slides</a>.</p>
 <ul>
-<li><p>The dataset has 279 rows and 28 variables, 11 character variables, 15 double variables, and 2 time variables.</p></li>
-<li><p>Methods for Data Collection and variables collected:</p>
+<li><p>My collected data has 279 rows and 28 variables, 11 character variables, 15 double variables, and 2 time variables.</p></li>
+<li><p><strong>Methods for Data Collection and variables collected:</strong></p>
 <ul>
 <li><p>Do a 50 m transect on both sides of the river, 1 meter out from shore, recorded plants every time seen, within 1 meters of each side of the tape (overall 4 meters recorded)</p></li>
-<li><p>When a stream is less than or equal to 2 meters wide, I only surveyed one transect in the middle of the river, to cover the full two meters.</p>
-<ul>
-<li><p>Every time plant is found measure:</p>
+<li><p>When a stream is less than or equal to 2 meters wide, I only surveyed one transect in the middle of the river, to cover the full two meters.</p></li>
+<li><p><u>Every time a plant was found I measured:</u></p>
 <ul>
 <li><p>Depth (m)</p></li>
 <li><p>Velocity (m/s)</p></li>
 <li><p>Substrate size (mm)</p></li>
 <li><p>Plant name and number of individuals or range/cover area on the transect</p></li>
 </ul></li>
-<li><p>Measure at each transect overall:</p>
+<li><p><u>Measure at each transect overall:</u></p>
 <ul>
-<li><p>canopy cover facing north, south, east, and west, and averaged over all 4, then multiplied by 4 and divided by product of 17*4 (freshwater ecology standard)</p></li>
-<li><p>the percentage of the 50-meter transects that are riffle, pool, run, or glide.</p></li>
-<li><p>water temperature (°C)</p></li>
+<li><p>Canopy cover facing north, south, east, and west, [these numbers were averaged, then multiplied by 4 and divided by product of 17*4 (freshwater ecology standard)]</p></li>
+<li><p>Percentage of the 50-meter transects that were riffle, pool, run, or glide.</p></li>
+<li><p>Water temperature (°C)</p></li>
 <li><p>pH</p></li>
-<li><p>conductivity(ms/cm)</p></li>
+<li><p>Conductivity(ms/cm)</p></li>
 <li><p>TDS (g/L)</p></li>
-<li><p>Dissolved oxygen (mg/L) and Dissolved oxygen (%)</p></li>
-<li><p>salinity</p></li>
+<li><p>Dissolved oxygen [DO] (mg/L) and Dissolved oxygen (%)</p></li>
+<li><p>Salinity (parts per thousand)</p></li>
 </ul></li>
 </ul></li>
+<li><p><strong>Downloaded StreamCat Variables:</strong></p>
+<ul>
+<li><p>Mean runoff (mm)</p></li>
+<li><p>Mean elevation (m)</p></li>
+<li><p>Watershed area (km2)</p></li>
+<li><p>Percent base stream flow index</p></li>
+<li><p>Mean annual precipitation from 1991-2020 (mm)</p></li>
+<li><p>Mean annual temperature from 1991-2020 (C°)</p></li>
+<li><p>Mean percent lithological calcium oxide (CaO) content</p></li>
+</ul></li>
+<li><p><strong>Research Questions and Hypotheses for Overall Project:</strong></p>
+<ul>
+<li>What aquatic plant species are present in the Carmel River Watershed and what species are the most abundant?
+<ul>
+<li><strong>H:</strong> Non-natives more abundant.</li>
+</ul></li>
+<li>Which environmental factors affect the distribution and diversity of aquatic plants in the Carmel River Watershed in Monterey County, CA?&nbsp;
+<ul>
+<li><strong>H:</strong> Diversity increases with increasing depth, sunlight, water quality, but decreases with increasing flow and substrate size.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Purpose of this Project Page:</strong> To explore and clean my Honors Capstone data before I start modelling the influence of these environmental factors on macrophyte abundance and presence or absence.</p></li>
+</ul>
+<!-- -->
+<ul>
+<li>Changed the substrate and velocity variables to remove “&gt;” or “&lt;” symbols so that they can be numeric variables. I did this with mutate().</li>
+<li>I dealt with missing data. I removed NA data from the velocity variable and change NA values in the depth variable to zero using mutate().</li>
+<li><strong>Creation of new variables:</strong>
+<ul>
+<li>Stem count variable: called calc_stem_abundance_m2 by multiplying number of individuals by 0.09 (accounting for each individual as 900 cm^2 on average for an estimate)</li>
+<li>Final Abundance variable: Combining the stem count variable and cover area. I used cover area when the value for the number of individuals is NA or individuals are greater than or equal to 150 (this may be a less accurate estimate of individuals so using cover area is a better estimate in this case). I also added a clause for using the cover area variable instead of individuals for annual grass if individuals are greater than 5 (as it is difficult to count individual blades of grass).</li>
+<li>Rooted versus floating variable: by combining the values of emergent and submergent into one value of “rooted” and keeping the value of “floating” the same.</li>
+<li>creating a presence/absence column for each species at each site with 1 indicating presence and 0 indicating absence.</li>
+</ul></li>
+<li><strong>Variable Summarization:</strong>
+<ul>
+<li>I will grouped my data by species, transect location and site. Then, I took the sum of the final_abundance, and calculated the mean for all my environmental variables, for each of the groupings.</li>
+<li>Created final datasets for presence-absence and abundance data with these summarizations</li>
+</ul></li>
+<li><strong>Pivoting:</strong>
+<ul>
+<li>I used pivot_wider to create the initial presence/absence matrix and then pivot_longer to add the environmental variables to the new presence/absence dataset.</li>
+</ul></li>
+<li><strong>Joining Data:</strong>
+<ul>
+<li>Joined additional environmental variables from the StreamCat dataset to my new abundance and presence/absence datasets.</li>
+</ul></li>
+<li><strong>Other aspects that needed to be “fixed” in order to make my data visualizations:</strong>
+<ul>
+<li>used the janitor package to clean my variable names and make it easier to fully clean my data.</li>
+<li>Excluded the variables: location_coordinates, date, observers, start_time, end_time, as they weren’t important for my analysis.</li>
+<li>DO % as well as the glide variable were removed due to redundancy in other variables as well as limited data.</li>
+<li>Salinity and TDS were also removed as they are derivative calculations of conductivity which was kept.</li>
+<li>Mean annual air temperature was removed as well since it doesn’t change much over the years and the field water temperature measurement is a better metric for aquatic plants.</li>
 </ul></li>
 </ul>
-</blockquote>
-<ol start="3" type="1">
-<li>Identify the research questions you want to answer.</li>
-</ol>
-<blockquote class="blockquote">
-<ol type="1">
-<li>How does abundance and diversity differ between site and transect? (2) Are there different environmental conditions that support specific species? (3) Which environmental factors lead to higher diversity? (4) Where do taxa tend to occur when they are not ubiquitous or rare?</li>
-</ol>
-</blockquote>
 </section>
-<section id="data-visualization" class="level1">
-<h1>Data Visualization</h1>
-<ol type="1">
-<li>What do you want your final visualizations to look like?</li>
-</ol>
-<blockquote class="blockquote">
-<ul>
-<li><p>Violin plots with jittered points for abundance and diversity between locations and transects</p></li>
-<li><p>dodged barchart showing average values of environmental variables with a fill of presence absence for important species to compare</p></li>
-<li><p>scatterplots with model regression lines for showing relationships between environmental factors and abundance as well as presence absence</p></li>
-<li><p>additional scatterplots showing regression lines for relationships of abundance of a specific species against important environmental factors</p></li>
-<li><p>possibly a table of values from eventual linear model output and random forest modelling output</p></li>
-</ul>
-</blockquote>
-<ol start="2" type="1">
-<li>What do you want to highlight on your final visualizations in order to answer your research questions? How do you plan to do that?</li>
-</ol>
-<blockquote class="blockquote">
-<ul>
-<li><p>Highlights:</p>
-<ul>
-<li><p>highlight the species with the most abundance and the species with the lowest abundance</p></li>
-<li><p>highlight the highest abundances between sites</p></li>
-<li><p>highlight any close relationships between environmental factors and abundance or presence absence</p></li>
-</ul></li>
-<li><p>My Plan:</p>
-<ul>
-<li><p>ordering bars, violin plots, etc. from smallest to biggest (using the mean to do this task with violin plots)</p></li>
-<li><p>use annotations or bright colors to highlight important notes</p></li>
-</ul></li>
-</ul>
-</blockquote>
-<ol start="3" type="1">
-<li>What is missing from your data or would need to change in your data to create these visualizations?</li>
-</ol>
-<blockquote class="blockquote">
-<ul>
-<li><p>Create a total abundance variable by combining the cover area and number of individuals variable</p>
-<ul>
-<li>an estimate of abundance would be 30 cm in width for each individual, so each individual was about 900 cm^2, so add this to the area counts</li>
-</ul></li>
-<li><p>Create a presence/absence column for every species at every site</p></li>
-<li><p>Join environmental variable columns to create separate datasets for presence/absence and abundance</p></li>
-<li><p>For substrate sizes: change &lt;2s to 1 (standard to use half of our limit number) and for numbers with a greater than symbol, use the lowest number, e.g.: change &gt;300, to 300</p></li>
-<li><p>For the velocity variable: change &lt;0.1 to 0.05; drop nas</p></li>
-<li><p>Treat NA depth as 0 depth</p></li>
-<li><p>Add a new column of rooted and floating by combining the values of emergent and submergent into one value of rooted!&nbsp;</p></li>
-<li><p>Join additional environmental data taken from the online EPA StreamCat Database:</p>
-<p>NHDPlus California Data Vector Processing, Unit 18. (2024) [downloaded file]. United States Environmental Protection Agency. Available by: <a href="https://www.epa.gov/waterdata/nhdplus-california-data-vector-processing-unit-18" class="uri">https://www.epa.gov/waterdata/nhdplus-california-data-vector-processing-unit-18</a>&nbsp;</p>
-<ul>
-<li>I will be reducing this data set to closely follow the Carmel River Watershed region, I am researching, in ArcGIS.</li>
-</ul></li>
-</ul>
-</blockquote>
+<section id="visualization-1-abundance-of-different-species-across-sites" class="level1">
+<h1>Visualization 1: Abundance of Different Species across Sites</h1>
+<p>The purpose of the visualization below is to show the change in abundance of my 16 aquatic plant species found throughout my 9 sites as well as overall abundance of aquatic plants throughout my sites. The sites are arranged on the graph from upstream (on the top of the graphic) to downstream on the bottom of the graphic. As you can see below, sites further downstream tend to have higher abundance of aquatic plants, except for my tributary sites which are outliers (my tributary sites are Potrero Creek, Tularcitos Creek, San Clemente Creek, and Garzas Creek). The “Carmel River - By Safeway” site has overall the highest abundance of aquatic plants and is the furthest downstream. The sites further downstream and on the main stem of the Carmel River are in the more urban areas of the Carmel Valley and are larger rivers, which may be contributing to this trend in aquatic plant abundance.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Final_Project_files/figure-html/abundance-barchart-1.png" class="img-fluid figure-img" alt="Horizontal stacked bar chart showing total abundance in square meters of aquatic plant species across creek locations from upstream to downstream. Locations include CR (Carmel River) - Cachagua Park, Tularcitos Creek, San Clemente Creek, CR - Rosie's Bridge, Garzas Creek, CR - Garland Ranch, CR - Schulte's Bridge, Potrero Creek, and CR - By Safeway. CR - By Safeway has the highest total abundance, followed by Garzas Creek and CR - Schulte's Bridge. A color legend lists 16 aquatic plant species." width="768"></p>
+<figcaption><strong>Figure 1.</strong> Bar chart showing species abundance at each site. CR stands for Carmel River on the plot. Sites are ordered upstream to downstream.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="data-cleaning" class="level1">
-<h1>Data Cleaning</h1>
-<ol type="1">
-<li>Do you need to reformat any variables into different types (e.g.&nbsp;factors, time, dates, strings)? Or remove information from variable values?</li>
-</ol>
-<blockquote class="blockquote">
-<p>Yes, I changed the substrate and velocity variables to remove “&gt;” or “&lt;” symbols so that they can be numeric variables. I did this with mutate().</p>
-</blockquote>
-<ol start="2" type="1">
-<li>Do you need to deal with any missing data, especially missing data coded other than NA?</li>
-</ol>
-<blockquote class="blockquote">
-<p>Yes, I removed NA data from the velocity variable and change NA values in the depth variable to zero. There is not any missing data that is not coded as NA. I did this with mutate().</p>
-</blockquote>
-<ol start="3" type="1">
-<li>Do you need to filter your data? How?</li>
-</ol>
-<blockquote class="blockquote">
-<p>No, I don’t need to do any filtering.</p>
-</blockquote>
-<ol start="4" type="1">
-<li>Do you need to create any new variables? What variables? How?</li>
-</ol>
-<blockquote class="blockquote">
-<ul>
-<li><p>using mutate()</p></li>
-<li><p>a stem count variable called calc_stem_abundance_m2 by multiplying number of individuals by 0.09 (accounting for each individual as 900 cm^2 on average for an estimate)</p></li>
-<li><p>a final_abundance variable by using cover area when the value for number_individuals is NA or individuals are greater than or equal to 150 (this may be a less accurate estimate of individuals so using cover area is a better estimate in this case). I also added a clause for using the cover area variable instead of individuals for annual grass if individuals are greater than 5 (as it is difficult to count individual blades of grass)</p></li>
-<li><p>Add a new variable of rooted_v_floating by combining the values of emergent and submergent into one value of “rooted”</p></li>
-<li><p>creating a presence/absence column for each species at each site with 1 indicating presence</p></li>
-</ul>
-</blockquote>
-<ol start="5" type="1">
-<li>Do you need to add new data (join) to your data? What data? How?</li>
-</ol>
-<blockquote class="blockquote">
-<p>Yes, I need to join additional environmental variables from the StreamCat dataset to my new abundance and presence/absence datasets. I will most likely use a left_join as I want to keep everything in the abundance and presence/absence datasets and only keep the data that matches from the StreamCat dataset. Greater understanding of how this will be accomplished will be known once I explore the StreamCat dataset further and determine exactly what needs to be done to join the datasets.</p>
-</blockquote>
-<ol start="6" type="1">
-<li>Do you need pivot your data in any way? Why? How?</li>
-</ol>
-<blockquote class="blockquote">
-<p>Yes, I needed to pivot_wider to create the initial presence/absence matrix and then pivot_longer to add the environmental variables to the new presence/absence dataset.</p>
-</blockquote>
-<ol start="7" type="1">
-<li>Do you need to summarize any of the variables? Which ones? How?</li>
-</ol>
-<blockquote class="blockquote">
-<p>Yes. I will be grouping my data by species, transect location and site. Then, I need to take the sum of the final_abundance, and calculate the mean for all my environmental variables, for each of the groupings.</p>
-</blockquote>
-<ol start="8" type="1">
-<li>What other aspects of your data need to be “fixed” in order to make your data visualizations?</li>
-</ol>
-<blockquote class="blockquote">
-<p>I also used the janitor package to clean my variable names and make it easier to fully clean my data.</p>
-</blockquote>
-<ol start="9" type="1">
-<li>Are there any variables you can exclude from your data?</li>
-</ol>
-<blockquote class="blockquote">
-<p>Yes, I excluded the variables: location_coordinates, date, observers, start_time, end_time, as they weren’t important for my analysis.</p>
-</blockquote>
+<section id="visualization-2-correlogram-of-important-variables-against-each-other" class="level1">
+<h1>Visualization 2: Correlogram of important variables against each other</h1>
+<p>The purpose of this second visualization is to understand the relationships between my environmental predictors and determine if there are any strong correlations present. Most relationships appear to be not very strong or have are relatively strong negative relationships. Some of the strongest relationships appear to be pH and pool % (positive) as well as pH and run % (negative). Dissolved oxygen (DO) also appears to be fairly correlated with pH (positive) as well as pool (negative), and run (positive) percentage variables. These correlations make sense as it is well understood that the type of flow can influence dissolved oxygen levels and other aspects of water chemistry. These types of inherent relationships need to be considered with modelling and other statistical analysis to understand the relationships between the environmental predictors and species abundance or presence-absence. (Due to such relationships linear and logistic regression models were abandoned in later analysis since I did not meet the assumptions for these models and I moved on to Random Forest Modelling for my final capstone project).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Final_Project_files/figure-html/correlogram-important predictors-1.png" class="img-fluid figure-img" alt="The correlogram has the variables: canopy cover, temperature, pH, conductivity, Dissolved oxygen, riffle percent, pool percent, run percent, depth, substrate size, velocity, base stream flow index, elevation calcium oxide content, runoff, precipitation, watershed area. Each variable is plotted against itself and every other variables with ovals showing the strength and direction. Narrower ovals are stronger while wider ovals are less strong and directional relationship are shown with slope and color. Darker blue color shows positive relationships while lighter blue-green shows negative color. Most relationships appear to be not very strong or have a negative relationship with another variable." width="768"></p>
+<figcaption><strong>Figure 2.</strong> Correlogram of important environmental predictors to understand strength of collinearity between variables.</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

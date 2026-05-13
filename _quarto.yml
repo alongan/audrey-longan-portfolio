@@ -10,6 +10,9 @@ website:
         text: "Home"
       - href: about.qmd
         text: "About Me"
+      - href: Final_Project/Final_Project.qmd
+        text: "Project: STAT 210 Class Example"
+        
 
 format:
   html:
