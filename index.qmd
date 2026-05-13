@@ -6,7 +6,7 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: www.linkedin.com/in/audrey-grace-longan-
+      href: https://www.linkedin.com/in/audrey-grace-longan-
     - icon: github
       text: Github
       href: https://github.com/alongan
