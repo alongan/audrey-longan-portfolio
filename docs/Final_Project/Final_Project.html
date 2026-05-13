@@ -121,6 +121,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#data-description" id="toc-data-description" class="nav-link active" data-scroll-target="#data-description">Data Description</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
   <li><a href="#visualization-1-abundance-of-different-species-across-sites" id="toc-visualization-1-abundance-of-different-species-across-sites" class="nav-link" data-scroll-target="#visualization-1-abundance-of-different-species-across-sites">Visualization 1: Abundance of Different Species across Sites</a></li>
   <li><a href="#visualization-2-correlogram-of-important-variables-against-each-other" id="toc-visualization-2-correlogram-of-important-variables-against-each-other" class="nav-link" data-scroll-target="#visualization-2-correlogram-of-important-variables-against-each-other">Visualization 2: Correlogram of important variables against each other</a></li>
   </ul>
@@ -199,7 +200,9 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p><strong>Purpose of this Project Page:</strong> To explore and clean my Honors Capstone data before I start modelling the influence of these environmental factors on macrophyte abundance and presence or absence.</p></li>
 </ul>
-<!-- -->
+</section>
+<section id="data-cleaning" class="level1">
+<h1>Data Cleaning</h1>
 <ul>
 <li>Changed the substrate and velocity variables to remove “&gt;” or “&lt;” symbols so that they can be numeric variables. I did this with mutate().</li>
 <li>I dealt with missing data. I removed NA data from the velocity variable and change NA values in the depth variable to zero using mutate().</li>

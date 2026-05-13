@@ -1,0 +1,257 @@
+location_name,transect_location_rb_lb,aquatic_plant_species,presence_or_not
+Rosie's Bridge,RB,Nasturtium officinale,1
+Rosie's Bridge,RB,annual grass,1
+Rosie's Bridge,RB,Veronica anagallis-aquatica,1
+Rosie's Bridge,RB,Mentha aquatica,1
+Rosie's Bridge,RB,Equisetum arvense,0
+Rosie's Bridge,RB,Scirpus microcarpus,0
+Rosie's Bridge,RB,Carex nudata,0
+Rosie's Bridge,RB,Juncus effusus,0
+Rosie's Bridge,RB,Persicaria punctata,0
+Rosie's Bridge,RB,Lemna spp.,0
+Rosie's Bridge,RB,Oenanthe sarmentosa,0
+Rosie's Bridge,RB,Hydrocotyle ranunculoides,0
+Rosie's Bridge,RB,Lunularia spp.,0
+Rosie's Bridge,RB,Carex species B,0
+Rosie's Bridge,RB,Veronica americana,0
+Rosie's Bridge,RB,Schoenoplectus pungens,0
+Rosie's Bridge,LB,Nasturtium officinale,1
+Rosie's Bridge,LB,annual grass,1
+Rosie's Bridge,LB,Veronica anagallis-aquatica,1
+Rosie's Bridge,LB,Mentha aquatica,1
+Rosie's Bridge,LB,Equisetum arvense,1
+Rosie's Bridge,LB,Scirpus microcarpus,0
+Rosie's Bridge,LB,Carex nudata,0
+Rosie's Bridge,LB,Juncus effusus,0
+Rosie's Bridge,LB,Persicaria punctata,0
+Rosie's Bridge,LB,Lemna spp.,0
+Rosie's Bridge,LB,Oenanthe sarmentosa,0
+Rosie's Bridge,LB,Hydrocotyle ranunculoides,0
+Rosie's Bridge,LB,Lunularia spp.,0
+Rosie's Bridge,LB,Carex species B,0
+Rosie's Bridge,LB,Veronica americana,0
+Rosie's Bridge,LB,Schoenoplectus pungens,0
+Garland Ranch,LB,Nasturtium officinale,1
+Garland Ranch,LB,annual grass,1
+Garland Ranch,LB,Veronica anagallis-aquatica,1
+Garland Ranch,LB,Mentha aquatica,1
+Garland Ranch,LB,Equisetum arvense,0
+Garland Ranch,LB,Scirpus microcarpus,0
+Garland Ranch,LB,Carex nudata,0
+Garland Ranch,LB,Juncus effusus,0
+Garland Ranch,LB,Persicaria punctata,0
+Garland Ranch,LB,Lemna spp.,0
+Garland Ranch,LB,Oenanthe sarmentosa,0
+Garland Ranch,LB,Hydrocotyle ranunculoides,0
+Garland Ranch,LB,Lunularia spp.,0
+Garland Ranch,LB,Carex species B,0
+Garland Ranch,LB,Veronica americana,0
+Garland Ranch,LB,Schoenoplectus pungens,0
+Garland Ranch,RB,Nasturtium officinale,1
+Garland Ranch,RB,annual grass,1
+Garland Ranch,RB,Veronica anagallis-aquatica,0
+Garland Ranch,RB,Mentha aquatica,1
+Garland Ranch,RB,Equisetum arvense,0
+Garland Ranch,RB,Scirpus microcarpus,1
+Garland Ranch,RB,Carex nudata,0
+Garland Ranch,RB,Juncus effusus,0
+Garland Ranch,RB,Persicaria punctata,0
+Garland Ranch,RB,Lemna spp.,0
+Garland Ranch,RB,Oenanthe sarmentosa,0
+Garland Ranch,RB,Hydrocotyle ranunculoides,0
+Garland Ranch,RB,Lunularia spp.,0
+Garland Ranch,RB,Carex species B,0
+Garland Ranch,RB,Veronica americana,0
+Garland Ranch,RB,Schoenoplectus pungens,0
+Cachagua Park,RB,Nasturtium officinale,0
+Cachagua Park,RB,annual grass,1
+Cachagua Park,RB,Veronica anagallis-aquatica,0
+Cachagua Park,RB,Mentha aquatica,0
+Cachagua Park,RB,Equisetum arvense,1
+Cachagua Park,RB,Scirpus microcarpus,0
+Cachagua Park,RB,Carex nudata,1
+Cachagua Park,RB,Juncus effusus,1
+Cachagua Park,RB,Persicaria punctata,0
+Cachagua Park,RB,Lemna spp.,0
+Cachagua Park,RB,Oenanthe sarmentosa,0
+Cachagua Park,RB,Hydrocotyle ranunculoides,0
+Cachagua Park,RB,Lunularia spp.,0
+Cachagua Park,RB,Carex species B,0
+Cachagua Park,RB,Veronica americana,0
+Cachagua Park,RB,Schoenoplectus pungens,0
+Cachagua Park,LB,Nasturtium officinale,0
+Cachagua Park,LB,annual grass,0
+Cachagua Park,LB,Veronica anagallis-aquatica,0
+Cachagua Park,LB,Mentha aquatica,0
+Cachagua Park,LB,Equisetum arvense,0
+Cachagua Park,LB,Scirpus microcarpus,0
+Cachagua Park,LB,Carex nudata,1
+Cachagua Park,LB,Juncus effusus,0
+Cachagua Park,LB,Persicaria punctata,0
+Cachagua Park,LB,Lemna spp.,0
+Cachagua Park,LB,Oenanthe sarmentosa,0
+Cachagua Park,LB,Hydrocotyle ranunculoides,0
+Cachagua Park,LB,Lunularia spp.,0
+Cachagua Park,LB,Carex species B,0
+Cachagua Park,LB,Veronica americana,0
+Cachagua Park,LB,Schoenoplectus pungens,0
+Schulte's Bridge (redo),LB,Nasturtium officinale,0
+Schulte's Bridge (redo),LB,annual grass,1
+Schulte's Bridge (redo),LB,Veronica anagallis-aquatica,1
+Schulte's Bridge (redo),LB,Mentha aquatica,1
+Schulte's Bridge (redo),LB,Equisetum arvense,0
+Schulte's Bridge (redo),LB,Scirpus microcarpus,1
+Schulte's Bridge (redo),LB,Carex nudata,0
+Schulte's Bridge (redo),LB,Juncus effusus,0
+Schulte's Bridge (redo),LB,Persicaria punctata,1
+Schulte's Bridge (redo),LB,Lemna spp.,0
+Schulte's Bridge (redo),LB,Oenanthe sarmentosa,0
+Schulte's Bridge (redo),LB,Hydrocotyle ranunculoides,0
+Schulte's Bridge (redo),LB,Lunularia spp.,0
+Schulte's Bridge (redo),LB,Carex species B,0
+Schulte's Bridge (redo),LB,Veronica americana,0
+Schulte's Bridge (redo),LB,Schoenoplectus pungens,0
+Schulte's Bridge (redo),RB,Nasturtium officinale,1
+Schulte's Bridge (redo),RB,annual grass,1
+Schulte's Bridge (redo),RB,Veronica anagallis-aquatica,1
+Schulte's Bridge (redo),RB,Mentha aquatica,1
+Schulte's Bridge (redo),RB,Equisetum arvense,0
+Schulte's Bridge (redo),RB,Scirpus microcarpus,0
+Schulte's Bridge (redo),RB,Carex nudata,0
+Schulte's Bridge (redo),RB,Juncus effusus,0
+Schulte's Bridge (redo),RB,Persicaria punctata,1
+Schulte's Bridge (redo),RB,Lemna spp.,0
+Schulte's Bridge (redo),RB,Oenanthe sarmentosa,0
+Schulte's Bridge (redo),RB,Hydrocotyle ranunculoides,0
+Schulte's Bridge (redo),RB,Lunularia spp.,0
+Schulte's Bridge (redo),RB,Carex species B,0
+Schulte's Bridge (redo),RB,Veronica americana,0
+Schulte's Bridge (redo),RB,Schoenoplectus pungens,0
+Lower Garzas (SLP),RB,Nasturtium officinale,1
+Lower Garzas (SLP),RB,annual grass,1
+Lower Garzas (SLP),RB,Veronica anagallis-aquatica,0
+Lower Garzas (SLP),RB,Mentha aquatica,0
+Lower Garzas (SLP),RB,Equisetum arvense,0
+Lower Garzas (SLP),RB,Scirpus microcarpus,1
+Lower Garzas (SLP),RB,Carex nudata,0
+Lower Garzas (SLP),RB,Juncus effusus,0
+Lower Garzas (SLP),RB,Persicaria punctata,1
+Lower Garzas (SLP),RB,Lemna spp.,1
+Lower Garzas (SLP),RB,Oenanthe sarmentosa,1
+Lower Garzas (SLP),RB,Hydrocotyle ranunculoides,1
+Lower Garzas (SLP),RB,Lunularia spp.,1
+Lower Garzas (SLP),RB,Carex species B,0
+Lower Garzas (SLP),RB,Veronica americana,0
+Lower Garzas (SLP),RB,Schoenoplectus pungens,0
+Lower Garzas (SLP),LB,Nasturtium officinale,1
+Lower Garzas (SLP),LB,annual grass,1
+Lower Garzas (SLP),LB,Veronica anagallis-aquatica,0
+Lower Garzas (SLP),LB,Mentha aquatica,0
+Lower Garzas (SLP),LB,Equisetum arvense,0
+Lower Garzas (SLP),LB,Scirpus microcarpus,1
+Lower Garzas (SLP),LB,Carex nudata,0
+Lower Garzas (SLP),LB,Juncus effusus,0
+Lower Garzas (SLP),LB,Persicaria punctata,1
+Lower Garzas (SLP),LB,Lemna spp.,1
+Lower Garzas (SLP),LB,Oenanthe sarmentosa,1
+Lower Garzas (SLP),LB,Hydrocotyle ranunculoides,0
+Lower Garzas (SLP),LB,Lunularia spp.,1
+Lower Garzas (SLP),LB,Carex species B,0
+Lower Garzas (SLP),LB,Veronica americana,0
+Lower Garzas (SLP),LB,Schoenoplectus pungens,0
+SLP Water Monitoring Site,RB,Nasturtium officinale,0
+SLP Water Monitoring Site,RB,annual grass,0
+SLP Water Monitoring Site,RB,Veronica anagallis-aquatica,0
+SLP Water Monitoring Site,RB,Mentha aquatica,0
+SLP Water Monitoring Site,RB,Equisetum arvense,1
+SLP Water Monitoring Site,RB,Scirpus microcarpus,0
+SLP Water Monitoring Site,RB,Carex nudata,0
+SLP Water Monitoring Site,RB,Juncus effusus,0
+SLP Water Monitoring Site,RB,Persicaria punctata,0
+SLP Water Monitoring Site,RB,Lemna spp.,0
+SLP Water Monitoring Site,RB,Oenanthe sarmentosa,0
+SLP Water Monitoring Site,RB,Hydrocotyle ranunculoides,0
+SLP Water Monitoring Site,RB,Lunularia spp.,0
+SLP Water Monitoring Site,RB,Carex species B,1
+SLP Water Monitoring Site,RB,Veronica americana,1
+SLP Water Monitoring Site,RB,Schoenoplectus pungens,0
+SLP Water Monitoring Site,LB,Nasturtium officinale,0
+SLP Water Monitoring Site,LB,annual grass,0
+SLP Water Monitoring Site,LB,Veronica anagallis-aquatica,1
+SLP Water Monitoring Site,LB,Mentha aquatica,0
+SLP Water Monitoring Site,LB,Equisetum arvense,0
+SLP Water Monitoring Site,LB,Scirpus microcarpus,0
+SLP Water Monitoring Site,LB,Carex nudata,0
+SLP Water Monitoring Site,LB,Juncus effusus,0
+SLP Water Monitoring Site,LB,Persicaria punctata,0
+SLP Water Monitoring Site,LB,Lemna spp.,0
+SLP Water Monitoring Site,LB,Oenanthe sarmentosa,0
+SLP Water Monitoring Site,LB,Hydrocotyle ranunculoides,0
+SLP Water Monitoring Site,LB,Lunularia spp.,0
+SLP Water Monitoring Site,LB,Carex species B,1
+SLP Water Monitoring Site,LB,Veronica americana,1
+SLP Water Monitoring Site,LB,Schoenoplectus pungens,0
+Creek Walk Start,MID,Nasturtium officinale,0
+Creek Walk Start,MID,annual grass,1
+Creek Walk Start,MID,Veronica anagallis-aquatica,0
+Creek Walk Start,MID,Mentha aquatica,0
+Creek Walk Start,MID,Equisetum arvense,1
+Creek Walk Start,MID,Scirpus microcarpus,0
+Creek Walk Start,MID,Carex nudata,0
+Creek Walk Start,MID,Juncus effusus,0
+Creek Walk Start,MID,Persicaria punctata,0
+Creek Walk Start,MID,Lemna spp.,0
+Creek Walk Start,MID,Oenanthe sarmentosa,0
+Creek Walk Start,MID,Hydrocotyle ranunculoides,0
+Creek Walk Start,MID,Lunularia spp.,0
+Creek Walk Start,MID,Carex species B,0
+Creek Walk Start,MID,Veronica americana,0
+Creek Walk Start,MID,Schoenoplectus pungens,0
+By Safeway Redo,LB,Nasturtium officinale,1
+By Safeway Redo,LB,annual grass,0
+By Safeway Redo,LB,Veronica anagallis-aquatica,1
+By Safeway Redo,LB,Mentha aquatica,1
+By Safeway Redo,LB,Equisetum arvense,0
+By Safeway Redo,LB,Scirpus microcarpus,0
+By Safeway Redo,LB,Carex nudata,0
+By Safeway Redo,LB,Juncus effusus,0
+By Safeway Redo,LB,Persicaria punctata,0
+By Safeway Redo,LB,Lemna spp.,1
+By Safeway Redo,LB,Oenanthe sarmentosa,0
+By Safeway Redo,LB,Hydrocotyle ranunculoides,0
+By Safeway Redo,LB,Lunularia spp.,0
+By Safeway Redo,LB,Carex species B,0
+By Safeway Redo,LB,Veronica americana,0
+By Safeway Redo,LB,Schoenoplectus pungens,0
+By Safeway Redo,RB,Nasturtium officinale,0
+By Safeway Redo,RB,annual grass,1
+By Safeway Redo,RB,Veronica anagallis-aquatica,1
+By Safeway Redo,RB,Mentha aquatica,1
+By Safeway Redo,RB,Equisetum arvense,1
+By Safeway Redo,RB,Scirpus microcarpus,0
+By Safeway Redo,RB,Carex nudata,0
+By Safeway Redo,RB,Juncus effusus,0
+By Safeway Redo,RB,Persicaria punctata,1
+By Safeway Redo,RB,Lemna spp.,1
+By Safeway Redo,RB,Oenanthe sarmentosa,0
+By Safeway Redo,RB,Hydrocotyle ranunculoides,0
+By Safeway Redo,RB,Lunularia spp.,0
+By Safeway Redo,RB,Carex species B,0
+By Safeway Redo,RB,Veronica americana,0
+By Safeway Redo,RB,Schoenoplectus pungens,1
+Tularcitos,MID,Nasturtium officinale,1
+Tularcitos,MID,annual grass,0
+Tularcitos,MID,Veronica anagallis-aquatica,0
+Tularcitos,MID,Mentha aquatica,0
+Tularcitos,MID,Equisetum arvense,0
+Tularcitos,MID,Scirpus microcarpus,1
+Tularcitos,MID,Carex nudata,0
+Tularcitos,MID,Juncus effusus,0
+Tularcitos,MID,Persicaria punctata,0
+Tularcitos,MID,Lemna spp.,0
+Tularcitos,MID,Oenanthe sarmentosa,0
+Tularcitos,MID,Hydrocotyle ranunculoides,0
+Tularcitos,MID,Lunularia spp.,0
+Tularcitos,MID,Carex species B,0
+Tularcitos,MID,Veronica americana,0
+Tularcitos,MID,Schoenoplectus pungens,0

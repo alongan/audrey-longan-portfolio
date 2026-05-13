@@ -1,0 +1,383 @@
+---
+title: "Honors Capstone Data Exploration"
+format: html
+execute: 
+  warning: false
+  eval: true
+---
+
+# Data Description
+
+My **Honors Capstone data** on the distribution and diversity of macrophytes (aquatic plants) in the Carmel River Watershed will be used for this project. I collected this data from the spring of 2025 until the end of fall 2025. I also joined additional variables from the [EPA’s StreamCat dataset](https://www.epa.gov/national-aquatic-resource-surveys/streamcat-dataset) (Hill et al. 2016) which are variable means for each smaller watershed in the Carmel River Watershed area. If you would like to know more about my findings, please check out my [Final Honors Capstone Slides](https://docs.google.com/presentation/d/1qyguPcPeW0xp4K8_dk5CdjECijCWCKajkX6ZEUmw0hg/edit?usp=sharing).
+
+- My collected data has 279 rows and 28 variables, 11 character variables, 15 double variables, and 2 time variables.
+
+- **Methods for Data Collection and variables collected:**
+
+  - Do a 50 m transect on both sides of the river, 1 meter out from shore, recorded plants every time seen, within 1 meters of each side of the tape (overall 4 meters recorded)
+
+  - When a stream is less than or equal to 2 meters wide, I only surveyed one transect in the middle of the river, to cover the full two meters.
+
+  - [Every time a plant was found I measured:]{.underline}
+
+    - Depth (m)
+
+    - Velocity (m/s)
+
+    - Substrate size (mm)
+
+    - Plant name and number of individuals or range/cover area on the transect
+
+  - [Measure at each transect overall:]{.underline}
+
+    - Canopy cover facing north, south, east, and west, \[these numbers were averaged, then multiplied by 4 and divided by product of 17\*4 (freshwater ecology standard)\]
+
+    - Percentage of the 50-meter transects that were riffle, pool, run, or glide.
+
+    - Water temperature (°C)
+
+    - pH
+
+    - Conductivity(ms/cm)
+
+    - TDS (g/L)
+
+    - Dissolved oxygen \[DO\] (mg/L) and Dissolved oxygen (%)
+
+    - Salinity (parts per thousand)
+
+- **Downloaded StreamCat Variables:**
+
+  - Mean runoff (mm)
+
+  - Mean elevation (m)
+
+  - Watershed area (km2)
+
+  - Percent base stream flow index
+
+  - Mean annual precipitation from 1991-2020 (mm)
+
+  - Mean annual temperature from 1991-2020 (C°)
+
+  - Mean percent lithological calcium oxide (CaO) content
+
+- **Research Questions and Hypotheses for Overall Project:**
+
+  - What aquatic plant species are present in the Carmel River Watershed and what species are the most abundant?
+    - **H:** Non-natives more abundant.
+  - Which environmental factors affect the distribution and diversity of aquatic plants in the Carmel River Watershed in Monterey County, CA? 
+    - **H:** Diversity increases with increasing depth, sunlight, water quality, but decreases with increasing flow and substrate size.
+
+- **Purpose of this Project Page:** To explore and clean my Honors Capstone data before I start modelling the influence of these environmental factors on macrophyte abundance and presence or absence.
+
+# Data Cleaning
+
+- Changed the substrate and velocity variables to remove "\>" or "\<" symbols so that they can be numeric variables. I did this with mutate().
+- I dealt with missing data. I removed NA data from the velocity variable and change NA values in the depth variable to zero using mutate().
+- **Creation of new variables:**
+  - Stem count variable: called calc_stem_abundance_m2 by multiplying number of individuals by 0.09 (accounting for each individual as 900 cm\^2 on average for an estimate)
+  - Final Abundance variable: Combining the stem count variable and cover area. I used cover area when the value for the number of individuals is NA or individuals are greater than or equal to 150 (this may be a less accurate estimate of individuals so using cover area is a better estimate in this case). I also added a clause for using the cover area variable instead of individuals for annual grass if individuals are greater than 5 (as it is difficult to count individual blades of grass).
+  - Rooted versus floating variable: by combining the values of emergent and submergent into one value of "rooted" and keeping the value of "floating" the same.
+  - creating a presence/absence column for each species at each site with 1 indicating presence and 0 indicating absence.
+- **Variable Summarization:**
+  - I will grouped my data by species, transect location and site. Then, I took the sum of the final_abundance, and calculated the mean for all my environmental variables, for each of the groupings.
+  - Created final datasets for presence-absence and abundance data with these summarizations
+- **Pivoting:**
+  - I used pivot_wider to create the initial presence/absence matrix and then pivot_longer to add the environmental variables to the new presence/absence dataset.
+- **Joining Data:**
+  - Joined additional environmental variables from the StreamCat dataset to my new abundance and presence/absence datasets.
+- **Other aspects that needed to be “fixed” in order to make my data visualizations:**
+  - used the janitor package to clean my variable names and make it easier to fully clean my data.
+  - Excluded the variables: location_coordinates, date, observers, start_time, end_time, as they weren't important for my analysis.
+  - DO % as well as the glide variable were removed due to redundancy in other variables as well as limited data.
+  - Salinity and TDS were also removed as they are derivative calculations of conductivity which was kept.
+  - Mean annual air temperature was removed as well since it doesn't change much over the years and the field water temperature measurement is a better metric for aquatic plants.
+
+```{r}
+#| label: setup
+#| include: false
+
+#loading all of my packages
+library(tidyverse)
+library(janitor)
+library(vegan)
+library(mosaic)
+library(car)
+library(ellipse)
+library(RColorBrewer)
+library(viridis)
+```
+
+```{r}
+#| label: reading-in-data
+#| include: false
+
+
+macrophytes <- read_csv("data-raw/macrophytes_full.csv") #reading in my original raw data before cleaning
+macrophytes <- janitor::clean_names(macrophytes) #cleaning my variable names
+```
+
+```{r}
+#| label: making-cover-variable
+#| include: false
+
+macrophytes |>
+  mutate(calc_stem_abundance_m2 = number_individuals*0.09) |> #using 0.09 m^2 as an average cover area for each individual plant seen and creating a stem abundance variable with just that data
+  mutate(final_abundance = case_when(is.na(number_individuals) ~ cover_area_m_2, 
+                                     number_individuals >= 150 ~ cover_area_m_2,
+                                     str_detect(aquatic_plant_species, "annual grass") & 
+                                       !is.na(cover_area_m_2) & 
+                                       number_individuals > 5 ~ cover_area_m_2,
+                                     .default = calc_stem_abundance_m2
+                                     ) #combining my stem abundance data with my regular cover area data with certain specifications for when I will use which variable for a certain species
+  ) |>
+  write_csv("data-raw/macrophytes_clean.csv") #writing this data into a new csv
+```
+
+```{r}
+#| label: editing-environmental-variables
+#| include: false
+
+macrophytes_abun <- read_csv("data-raw/macrophytes_clean.csv", col_select = -c(location_coordinates, date, observers, start_time, end_time)) |> #reading in previously edited csv and removing unnecessary variables
+  drop_na(velocity_m_s) |> #NAs removed from velocity
+  mutate(substrate_size_mm = as.numeric(case_when(
+          substrate_size_mm == "<2" ~ "1",
+          substrate_size_mm == ">300" ~ "300",
+          .default = substrate_size_mm
+         )), #substrate size variable changed so there are no longer <2 or >300 values
+        velocity_m_s = as.numeric(case_when(
+          velocity_m_s == "<0.1" ~ "0.05",
+          .default = velocity_m_s
+        )), #velocity variable changed so there are no longer <0.1 values
+        depth_m = case_when(
+          depth_m == "NA" ~ 0,
+          .default = depth_m
+        ), #NA values in depth changed to zero, this is a logical step made for my research
+        rooted_v_floating = case_when(
+          emergent_submergent_or_floating == "emergent" ~ "rooted",
+          emergent_submergent_or_floating == "submergent" ~ "rooted",
+          emergent_submergent_or_floating == "partly emergent" ~ "rooted",
+          emergent_submergent_or_floating == "floating" ~ "floating"
+        )) #new rooted versus floating variable created from the emergent-submergent-floating variable
+```
+
+```{r}
+#| label: creating-abundance-dataset
+#| include: false
+
+#creating total abundance for each species, bank, and site
+macrophytes_abun |>
+  group_by(aquatic_plant_species, transect_location_rb_lb, location_name, rooted_v_floating, water_body, season) |> #grouping my data by species, transect location, and site; the rooted_v_floating, water_body, and season variables were added so they could be in the table but they do not change how the data is grouped based on the first 3 variables
+    summarise(Calc_total_abundance_m2 = sum(final_abundance), 
+              canopy_cover_mean = mean(canopy_cover_0_to_1_ratio),
+              temperature_c_mean = mean(temperature_c),
+              p_h_mean = mean(p_h),
+              conductivity_mean = mean(conductivity_m_s_cm),
+              salinity_mean = mean(salinity),
+              tds_g_l_mean = mean(tds_g_l),
+              do_percent_mean = mean(do_percent),
+              do_mg_l_mean = mean(do_mg_l),
+              riffle_mean = mean(riffle),
+              pool_mean = mean(pool),
+              run_mean = mean(run),
+              glide_mean = mean(glide),
+              depth_m_mean = mean(depth_m),
+              substrate_size_mm_mean = mean(substrate_size_mm),
+              velocity_m_s_mean = mean(velocity_m_s),
+              .groups = 'drop') |> #means calculated for my variables
+ write_csv("data-clean/macrophytes_corr.csv") #final dataset has been created for abundance
+```
+
+```{r}
+#| label: presence-absence-dataset-creation
+#| include: false
+
+#Creating a presence-absence version of my dataset for each transect and site
+
+presence_absence_factors <- macrophytes_abun |>
+    group_by(location_name, transect_location_rb_lb, water_body, season) |> #grouping by site, transect, water body and season
+    summarise(canopy_cover_mean = mean(canopy_cover_0_to_1_ratio),
+              temperature_c_mean = mean(temperature_c),
+              p_h_mean = mean(p_h),
+              conductivity_mean = mean(conductivity_m_s_cm),
+              salinity_mean = mean(salinity),
+              tds_g_l_mean = mean(tds_g_l),
+              do_percent_mean = mean(do_percent),
+              do_mg_l_mean = mean(do_mg_l),
+              riffle_mean = mean(riffle),
+              pool_mean = mean(pool),
+              run_mean = mean(run),
+              glide_mean = mean(glide),
+              .groups = 'drop') |> #means of my overall variables for each site were calculated
+  write_csv("data-raw/factorsfor_presabs_only.csv") #presence-absence predictors dataset created
+
+
+presence_absence_matrix <- macrophytes_abun |>
+  select(location_name, transect_location_rb_lb, aquatic_plant_species) |> # Keep only unique occurrences
+  distinct() |>
+  mutate(Present = 1) |> # Add a column with value 1 for presence
+  pivot_wider(
+    id_cols = c(location_name, transect_location_rb_lb),
+    names_from = aquatic_plant_species,
+    values_from = Present,
+    values_fill = 0 # Automatically fills non-observed combinations with 0
+  ) |>
+  pivot_longer(cols = -c(location_name, transect_location_rb_lb), names_to = "aquatic_plant_species", values_to = "presence_or_not") |>
+  write_csv("data-raw/presence_absence_only.csv") #presence-absence variable matrix created and stored; the predictors dataset and presence-absence variable matrix were joined together outside of R to create one presence-absence dataset
+
+```
+
+```{r}
+#| label: abundance-diversity-indices
+#| include: false
+#| message: false
+
+macrophytes_final_original <- read_csv("data-clean/macrophytes_corr.csv") #reading in the original final dataset
+
+new_variables <- read_csv("newvariables_wSites.csv") #reading in the dataset from StreamCat with the additional variables
+
+macrophytes_final <- macrophytes_final_original |>
+  full_join(new_variables, by = c("location_name" = "Location_Name")) #joining GIS StreamCat variables to abundance data
+
+macrophytes_final[16, 1] <- "Lunularia cruciata" #fixing two individual entries to be the correct names as it previously only said "Lunularia spp., which was wrong"
+macrophytes_final[17, 1] <- "Lunularia cruciata"
+
+#Diversity Indices being calculated
+abundance_matrix <- macrophytes_final |> 
+  select(location_name, aquatic_plant_species, Calc_total_abundance_m2) |> #variables needed for abundance selected
+  group_by(aquatic_plant_species, location_name) |> #data grouped by species and location
+  summarise(Calc_total_abundance_m2 = sum(Calc_total_abundance_m2)) |> #abundance was summarized based on species and location from the group_by
+  pivot_wider(names_from = aquatic_plant_species, values_from = Calc_total_abundance_m2, values_fill = 0) |> #this new summarised information is pivoted to a wide format for the diversity calculations below
+  column_to_rownames("location_name")
+
+# 1. Shannon-Weiner Diversity Index
+shannon <- diversity(abundance_matrix, index = "shannon") 
+
+# 2. Simpson's Diversity Index (Gini-Simpson: 1 - D)
+simpson <- diversity(abundance_matrix, index = "simpson") 
+
+# 3. Species Richness (S)
+richness <- specnumber(abundance_matrix)
+
+# 4. Pielou's Evenness (J)
+evenness <- shannon / log(richness)
+
+diversity_indices_results <- data.frame(
+  Site = rownames(abundance_matrix),
+  Shannon = shannon,
+  Simpson = simpson,
+  Richness = richness,
+  Evenness = evenness
+) #results of my diversity indices have been combined into a table
+
+print(diversity_indices_results)
+
+#overall indices
+# 1. Create a single 'Overall' row by summing species abundances
+overall_abundances <- abundance_matrix %>%
+  summarise(across(everything(), sum)) 
+
+# 2. Calculate indices for the Overall landscape
+overall_results <- data.frame(
+  Site = "OVERALL",
+  Richness = specnumber(overall_abundances),
+  Shannon = diversity(overall_abundances, index = "shannon"),
+  Simpson = diversity(overall_abundances, index = "simpson"),
+  Evenness = diversity(overall_abundances) / log(specnumber(overall_abundances))
+) #summarizing the overall index into a table
+
+# 3. Combine with your individual site results
+final_table <- diversity_indices_results %>% # 'diversity_indices_results' is the table from the previous step
+  bind_rows(overall_results)
+#these results were copied into a table created outside of R
+```
+
+```{r}
+#| label: variable-removal
+#| include: false
+
+#removal of variables from the dataset which were later determined to be redundant or unnecessary for graphics
+macrophytes_final <- macrophytes_final |>
+  select(-c(salinity_mean, tds_g_l_mean, do_percent_mean, glide_mean, StreamCat_data_csv_tmean9120ws, StreamCat_data_csv_catareasqkmrp100, StreamCat_data_csv_wsareasqkmrp100, StreamCat_data_csv_catareasqkm, watercress_inCatchments_2_AreaSqKM, watercress_inCatchments_2_LengthKM, watercress_inCatchments_2_Shape_Length_1))
+  
+```
+
+# Visualization 1: Abundance of Different Species across Sites
+
+The purpose of the visualization below is to show the change in abundance of my 16 aquatic plant species found throughout my 9 sites as well as overall abundance of aquatic plants throughout my sites. The sites are arranged on the graph from upstream (on the top of the graphic) to downstream on the bottom of the graphic. As you can see below, sites further downstream tend to have higher abundance of aquatic plants, except for my tributary sites which are outliers (my tributary sites are Potrero Creek, Tularcitos Creek, San Clemente Creek, and Garzas Creek). The "Carmel River - By Safeway" site has overall the highest abundance of aquatic plants and is the furthest downstream. The sites further downstream and on the main stem of the Carmel River are in the more urban areas of the Carmel Valley and are larger rivers, which may be contributing to this trend in aquatic plant abundance.
+
+```{r}
+#| label: abundance-barchart
+#| echo: false
+#| fig-cap: "**Figure 1.** Bar chart showing species abundance at each site. CR stands for Carmel River on the plot. Sites are ordered upstream to downstream."
+#| fig-alt: "Horizontal stacked bar chart showing total abundance in square meters of aquatic plant species across creek locations from upstream to downstream. Locations include CR (Carmel River) - Cachagua Park, Tularcitos Creek, San Clemente Creek, CR - Rosie's Bridge, Garzas Creek, CR - Garland Ranch, CR - Schulte's Bridge, Potrero Creek, and CR - By Safeway. CR - By Safeway has the highest total abundance, followed by Garzas Creek and CR - Schulte's Bridge. A color legend lists 16 aquatic plant species."
+#| fig-height: 5
+#| fig-width: 8
+
+macrophytes_final |>
+  select(location_name, aquatic_plant_species, Calc_total_abundance_m2) |> #site, species, and abundance variables selected
+  ggplot(aes(x = Calc_total_abundance_m2, fill = aquatic_plant_species, y = fct_relevel(location_name, "By Safeway Redo", "Creek Walk Start", "Schulte's Bridge (redo)", "Garland Ranch", "Lower Garzas (SLP)",  "Rosie's Bridge", "SLP Water Monitoring Site", "Tularcitos", "Cachagua Park"))) +  #ggplot created with x mapping to abundance, fill mapping to species, and y mapping to site, using fct_relevel to order my sites as upstream to downstream
+  geom_col() + #makes the geometry of the plot bars
+  labs(
+    #creates the x and y axis labels as well as my legend title
+    x = expression("Total Abundance " *  (m^2)), 
+    y = "Location",
+    fill = "Aquatic Plant Species") +
+  theme_bw() + #This code got rid of the gray background 
+  theme(legend.text = element_text(size = 12), axis.text = element_text(size = 12), axis.title = element_text(size = 16), legend.title = element_text(size = 16)) + #increasing text size for all of the aspects of the graph
+  scale_fill_viridis_d(option = "mako", begin = 0.25, end = 0.95) + #using the viridis mako option as I like this color pallete the best
+  scale_y_discrete(labels = c("Tularcitos" = "Tularcitos Creek", "Schulte's Bridge (redo)" = "CR - Schulte's Bridge", "Garland Ranch" = "CR - Garland Ranch", "By Safeway Redo" = "CR - By Safeway", "Cachagua Park" = "CR - Cachagua Park", "Rosie's Bridge" = "CR - Rosie's Bridge", "Lower Garzas (SLP)" = "Garzas Creek", "SLP Water Monitoring Site" = "San Clemente Creek", "Creek Walk Start" = "Potrero Creek")) #changing the names of my sites too look nicer on the graph
+
+  
+```
+
+# Visualization 2: Correlogram of important variables against each other
+
+The purpose of this second visualization is to understand the relationships between my environmental predictors and determine if there are any strong correlations present. Most relationships appear to be not very strong or have are relatively strong negative relationships. Some of the strongest relationships appear to be pH and pool % (positive) as well as pH and run % (negative). Dissolved oxygen (DO) also appears to be fairly correlated with pH (positive) as well as pool (negative), and run (positive) percentage variables. These correlations make sense as it is well understood that the type of flow can influence dissolved oxygen levels and other aspects of water chemistry. These types of inherent relationships need to be considered with modelling and other statistical analysis to understand the relationships between the environmental predictors and species abundance or presence-absence. (Due to such relationships linear and logistic regression models were abandoned in later analysis since I did not meet the assumptions for these models and I moved on to Random Forest Modelling for my final capstone project).
+
+```{r}
+#| label: correlogram-important predictors
+#| echo: false
+#| fig-cap: "**Figure 2.** Correlogram of important environmental predictors to understand strength of collinearity between variables."
+#| fig-alt: "The correlogram has the variables: canopy cover, temperature, pH, conductivity, Dissolved oxygen, riffle percent, pool percent, run percent, depth, substrate size, velocity, base stream flow index, elevation calcium oxide content, runoff, precipitation, watershed area. Each variable is plotted against itself and every other variables with ovals showing the strength and direction. Narrower ovals are stronger while wider ovals are less strong and directional relationship are shown with slope and color. Darker blue color shows positive relationships while lighter blue-green shows negative color. Most relationships appear to be not very strong or have a negative relationship with another variable."
+#| fig-height: 8
+#| fig-width: 8
+ 
+cor_data <- cor(macrophytes_final[c(8:18, 22:27)], use = "complete.obs") #specifying correlogram data
+
+# Renaming variables before plotting
+new_labels <- c(
+  "canopy_cover_mean" = "Canopy Cover",
+  "temperature_c_mean" = "Temperature",
+  "p_h_mean" = "pH",
+  "conductivity_mean" = "Conductivity",
+  "do_mg_l_mean" = "DO",
+  "riffle_mean" = "Riffle (%)",
+  "pool_mean" = "Pool (%)",
+  "run_mean" = "Run (%)",
+  "depth_m_mean" = "Depth",
+  "substrate_size_mm_mean" = "Substrate Size",
+  "velocity_m_s_mean" = "Velocity",
+  "StreamCat_data_csv_bfiws" = "Base Stream Flow Index",
+  "StreamCat_data_csv_elevws" = "Elevation",
+  "StreamCat_data_csv_caows" = "CaO Content",
+  "StreamCat_data_csv_runoffws" = "Runoff",
+  "StreamCat_data_csv_precip9120ws" = "Precipitation",
+  "StreamCat_data_csv_wsareasqkm" = "Watershed Area"
+)
+
+#establishing the new labels for the correlogram data
+rownames(cor_data) <- new_labels[rownames(cor_data)]
+colnames(cor_data) <- new_labels[colnames(cor_data)]
+ 
+# Building a pannel of colors using the viridis mako option
+my_colors <- viridis(100, option = "mako", begin = 0.25, end = 0.95)
+ 
+# Orders the correlation matrix
+ord <- order(cor_data[1, ])
+cor_data_ord <- cor_data[ord, ord]
+
+cor_data_ord |>
+  plotcorr(col=my_colors[cor_data_ord*50+50] , mar=c(1,1,1,1), asp = 1) #plots the correlogram with 1 to 1 aspect
+```

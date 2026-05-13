@@ -1,0 +1,69 @@
+aquatic_plant_species,transect_location_rb_lb,location_name,rooted_v_floating,water_body,season,Calc_total_abundance_m2,canopy_cover_mean,temperature_c_mean,p_h_mean,conductivity_mean,salinity_mean,tds_g_l_mean,do_percent_mean,do_mg_l_mean,riffle_mean,pool_mean,run_mean,glide_mean,depth_m_mean,substrate_size_mm_mean,velocity_m_s_mean
+Carex nudata,LB,Cachagua Park,rooted,Carmel River,spring,5.13,1,13.4,8.52,0.141,0.09,0.117,75.2,7.85,0,0,100,0,0.6980000000000001,276,0.188976
+Carex nudata,RB,Cachagua Park,rooted,Carmel River,spring,5.76,0.9411764706,13.47,8.52,0.143,0.09,0.119,73.8,7.69,0,0,100,0,0.439,127.10666666666667,0.057912
+Carex species B,LB,SLP Water Monitoring Site,rooted,San Clemente Creek,fall,0.54,0.9264705882,12.75,7.99,0.226,0.14,0.192,82.2,8.54,60,40,0,0,0.14,8,0.0115
+Carex species B,RB,SLP Water Monitoring Site,rooted,San Clemente Creek,fall,0.54,0.8970588235,12.58,7.63,0.225,0.14,0.192,74.5,7.94,60,40,0,0,0.17500000000000002,97.75,9.249999999999999e-4
+Equisetum arvense,LB,Rosie's Bridge,rooted,Carmel River,spring,1.7999999999999998,0.7205882353,11.09,8.42,0.157,0.1,0.138,95.2,10.46,45,0,55,0,0.35,64,1
+Equisetum arvense,MID,Creek Walk Start,rooted,Potrero Creek,fall,0.18,1,11.54,7.57,0.5,0.33,0.438,46.8,5.08,1,99,0,0,0.075,66,-2.5e-4
+Equisetum arvense,RB,By Safeway Redo,rooted,Carmel River,fall,0.99,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.05,32,0
+Equisetum arvense,RB,Cachagua Park,rooted,Carmel River,spring,2.79,0.9411764706,13.47,8.52,0.143,0.09,0.119,73.8,7.69,0,0,100,0,0.12,128,0.03048
+Equisetum arvense,RB,SLP Water Monitoring Site,rooted,San Clemente Creek,fall,2.61,0.8970588235,12.58,7.63,0.225,0.14,0.192,74.5,7.94,60,40,0,0,0.11333333333333333,54.666666666666664,0.010933333333333333
+Hydrocotyle ranunculoides,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.27,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.1,32,0.0403
+Juncus effusus,RB,Cachagua Park,rooted,Carmel River,spring,0.18,0.9411764706,13.47,8.52,0.143,0.09,0.119,73.8,7.69,0,0,100,0,0.56,45,0.03048
+Lemna spp.,LB,By Safeway Redo,floating,Carmel River,fall,2.9,0.3382352941,13.7,7.12,0.582,0.37,0.482,41.9,4.32,0,85,0,15,0.25,1,-0.0026
+Lemna spp.,LB,Lower Garzas (SLP),floating,Garzas Creek,fall,63.8,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.1425,95.25,0.03975
+Lemna spp.,RB,By Safeway Redo,floating,Carmel River,fall,0.1,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.53,1,0.0035
+Lemna spp.,RB,Lower Garzas (SLP),floating,Garzas Creek,fall,38.1,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.149,81.57142857142857,0.034057142857142855
+Lunularia spp.,LB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.4,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.19,106.3,0.10475
+Lunularia spp.,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,2.7,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.16,45,0.0716
+Mentha aquatica,LB,By Safeway Redo,rooted,Carmel River,fall,0.54,0.3382352941,13.7,7.12,0.582,0.37,0.482,41.9,4.32,0,85,0,15,0.22,16.65,0.003925
+Mentha aquatica,LB,Garland Ranch,rooted,Carmel River,spring,2.79,0.9264705882,13.45,8.29,0.195,0.12,0.163,91.7,9.54,0,0,100,0,0.467,37.3,0.15
+Mentha aquatica,LB,Rosie's Bridge,rooted,Carmel River,spring,3.42,0.7205882353,11.09,8.42,0.157,0.1,0.138,95.2,10.46,45,0,55,0,0.32,60,0.9333333333333333
+Mentha aquatica,LB,Schulte's Bridge (redo),rooted,Carmel River,fall,47.89,0.9264705882,16.73,7.31,0.339,0.19,0.262,51,4.94,0,50,50,0,0.651875,14.375,0.01524
+Mentha aquatica,RB,By Safeway Redo,rooted,Carmel River,fall,3.69,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.2533333333333333,16.2,0.008766666666666667
+Mentha aquatica,RB,Garland Ranch,rooted,Carmel River,spring,8.82,0.8529411765,14.46,8.46,0.201,0.12,0.164,102.2,10.38,0,2,98,0,0.508,35.6,0.2
+Mentha aquatica,RB,Rosie's Bridge,rooted,Carmel River,spring,11.25,0.7058823529,11.11,8.42,0.156,0.1,0.138,95,10.44,25,0,75,0,0.24666666666666667,39.53333333333333,0.3666666666666667
+Mentha aquatica,RB,Schulte's Bridge (redo),rooted,Carmel River,fall,4.32,1,16.79,7.41,0.334,0.19,0.257,51.8,5.03,0,75,25,0,0.40166666666666667,8.2,0.02032
+Nasturtium officinale,LB,By Safeway Redo,rooted,Carmel River,fall,3.06,0.3382352941,13.7,7.12,0.582,0.37,0.482,41.9,4.32,0,85,0,15,0.26,18.533333333333335,0.004366666666666666
+Nasturtium officinale,LB,Garland Ranch,rooted,Carmel River,spring,3.42,0.9264705882,13.45,8.29,0.195,0.12,0.163,91.7,9.54,0,0,100,0,0.455,49.3,0.16
+Nasturtium officinale,LB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.09,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.24,32,0.019
+Nasturtium officinale,LB,Rosie's Bridge,rooted,Carmel River,spring,0.9,0.7205882353,11.09,8.42,0.157,0.1,0.138,95.2,10.46,45,0,55,0,0.35,45,0.8
+Nasturtium officinale,MID,Tularcitos,rooted,Tularcitos Creek,fall,6.39,0.9117647059,13.82,8.19,0.875,0.56,0.723,62.2,6.35,10,40,50,0,0.0725,4.7749999999999995,0.13815
+Nasturtium officinale,RB,Garland Ranch,rooted,Carmel River,spring,3.33,0.8529411765,14.46,8.46,0.201,0.12,0.164,102.2,10.38,0,2,98,0,0.472,100,0.22
+Nasturtium officinale,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,1.5299999999999998,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.07333333333333333,41.2,0.04746666666666667
+Nasturtium officinale,RB,Rosie's Bridge,rooted,Carmel River,spring,0.63,0.7058823529,11.11,8.42,0.156,0.1,0.138,95,10.44,25,0,75,0,0.33499999999999996,45.5,0.35
+Nasturtium officinale,RB,Schulte's Bridge (redo),rooted,Carmel River,fall,0.63,1,16.79,7.41,0.334,0.19,0.257,51.8,5.03,0,75,25,0,8.936666666666667,32.8,0.06096
+Oenanthe sarmentosa,LB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.09,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.28,22.6,0.1578
+Oenanthe sarmentosa,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.36,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.09,45.05,0.030025
+Persicaria punctata,LB,Lower Garzas (SLP),rooted,Garzas Creek,fall,6.390000000000001,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.18,119.7,0.0311875
+Persicaria punctata,LB,Schulte's Bridge (redo),rooted,Carmel River,fall,8.19,0.9264705882,16.73,7.31,0.339,0.19,0.262,51,4.94,0,50,50,0,0.7633333333333333,22,0.02032
+Persicaria punctata,RB,By Safeway Redo,rooted,Carmel River,fall,0.72,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.26,13.5,-0.00255
+Persicaria punctata,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,6.12,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.14333333333333334,101.22222222222223,0.021844444444444444
+Persicaria punctata,RB,Schulte's Bridge (redo),rooted,Carmel River,fall,0.8999999999999999,1,16.79,7.41,0.334,0.19,0.257,51.8,5.03,0,75,25,0,1.0699999999999998,3.3,0.06096
+Schoenoplectus pungens,RB,By Safeway Redo,rooted,Carmel River,fall,4.859999999999999,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.45333333333333337,8.333333333333334,0.005533333333333333
+Scirpus microcarpus,LB,Lower Garzas (SLP),rooted,Garzas Creek,fall,3.33,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.18285714285714286,110.94285714285715,0.047842857142857145
+Scirpus microcarpus,LB,Schulte's Bridge (redo),rooted,Carmel River,fall,2.61,0.9264705882,16.73,7.31,0.339,0.19,0.262,51,4.94,0,50,50,0,0.83,1,0.03048
+Scirpus microcarpus,MID,Tularcitos,rooted,Tularcitos Creek,fall,44.73,0.9117647059,13.82,8.19,0.875,0.56,0.723,62.2,6.35,10,40,50,0,0.11090909090909092,4.090909090909091,0.17129090909090908
+Scirpus microcarpus,RB,Garland Ranch,rooted,Carmel River,spring,6.4799999999999995,0.8529411765,14.46,8.46,0.201,0.12,0.164,102.2,10.38,0,2,98,0,0.5675,106,0.275
+Scirpus microcarpus,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.81,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.07,164,0.0106
+Veronica americana,LB,SLP Water Monitoring Site,rooted,San Clemente Creek,fall,0.09,0.9264705882,12.75,7.99,0.226,0.14,0.192,82.2,8.54,60,40,0,0,0.16,2,8e-4
+Veronica americana,RB,SLP Water Monitoring Site,rooted,San Clemente Creek,fall,0.09,0.8970588235,12.58,7.63,0.225,0.14,0.192,74.5,7.94,60,40,0,0,0.08,128,7e-4
+Veronica anagallis-aquatica,LB,By Safeway Redo,rooted,Carmel River,fall,56.26,0.3382352941,13.7,7.12,0.582,0.37,0.482,41.9,4.32,0,85,0,15,0.245,22.483333333333334,0.0047083333333333335
+Veronica anagallis-aquatica,LB,Garland Ranch,rooted,Carmel River,spring,0.27,0.9264705882,13.45,8.29,0.195,0.12,0.163,91.7,9.54,0,0,100,0,0.24,64,0
+Veronica anagallis-aquatica,LB,Rosie's Bridge,rooted,Carmel River,spring,0.18,0.7205882353,11.09,8.42,0.157,0.1,0.138,95.2,10.46,45,0,55,0,0.4,32,0.6
+Veronica anagallis-aquatica,LB,SLP Water Monitoring Site,rooted,San Clemente Creek,fall,0.09,0.9264705882,12.75,7.99,0.226,0.14,0.192,82.2,8.54,60,40,0,0,0.12,32,-0.0039
+Veronica anagallis-aquatica,LB,Schulte's Bridge (redo),rooted,Carmel River,fall,3.15,0.9264705882,16.73,7.31,0.339,0.19,0.262,51,4.94,0,50,50,0,0.595,14.375,0.02286
+Veronica anagallis-aquatica,RB,By Safeway Redo,rooted,Carmel River,fall,50.309999999999995,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.20857142857142857,9.942857142857143,0.0013
+Veronica anagallis-aquatica,RB,Rosie's Bridge,rooted,Carmel River,spring,0.36,0.7058823529,11.11,8.42,0.156,0.1,0.138,95,10.44,25,0,75,0,0.19,1,0.1
+Veronica anagallis-aquatica,RB,Schulte's Bridge (redo),rooted,Carmel River,fall,13.56,1,16.79,7.41,0.334,0.19,0.257,51.8,5.03,0,75,25,0,6.888333333333334,3.933333333333333,0.02032
+annual grass,LB,Garland Ranch,rooted,Carmel River,spring,25.869999999999997,0.9264705882,13.45,8.29,0.195,0.12,0.163,91.7,9.54,0,0,100,0,0.345,16.75,0.1875
+annual grass,LB,Lower Garzas (SLP),rooted,Garzas Creek,fall,0.09,1,19.97,7.43,0.183,0.1,0.133,42.3,3.84,40,60,0,0,0.1,190,0.0517
+annual grass,LB,Rosie's Bridge,rooted,Carmel River,spring,7.87,0.7205882353,11.09,8.42,0.157,0.1,0.138,95.2,10.46,45,0,55,0,0.34800000000000003,52.6,0.86
+annual grass,LB,Schulte's Bridge (redo),rooted,Carmel River,fall,10,0.9264705882,16.73,7.31,0.339,0.19,0.262,51,4.94,0,50,50,0,0.42500000000000004,32.5,0
+annual grass,MID,Creek Walk Start,rooted,Potrero Creek,fall,0.09,1,11.54,7.57,0.5,0.33,0.438,46.8,5.08,1,99,0,0,0.12,45,0.001
+annual grass,RB,By Safeway Redo,rooted,Carmel River,fall,50.76,0.2058823529,16.51,7.07,0.94,0.56,0.729,54,5.2,0,100,0,0,0.1525,7.55,5.0000000000000036e-5
+annual grass,RB,Cachagua Park,rooted,Carmel River,spring,1.17,0.9411764706,13.47,8.52,0.143,0.09,0.119,73.8,7.69,0,0,100,0,0.45,90,0.1524
+annual grass,RB,Garland Ranch,rooted,Carmel River,spring,11.84,0.8529411765,14.46,8.46,0.201,0.12,0.164,102.2,10.38,0,2,98,0,0.545,57.5,0.25
+annual grass,RB,Lower Garzas (SLP),rooted,Garzas Creek,fall,2.2,1,20.01,7.33,0.184,0.1,0.131,40.7,3.72,20,80,0,0,0.08,111.3,-0.02935
+annual grass,RB,Rosie's Bridge,rooted,Carmel River,spring,2.47,0.7058823529,11.11,8.42,0.156,0.1,0.138,95,10.44,25,0,75,0,0.26,21.666666666666668,0.4
+annual grass,RB,Schulte's Bridge (redo),rooted,Carmel River,fall,16.2,1,16.79,7.41,0.334,0.19,0.257,51.8,5.03,0,75,25,0,0.115,8,0
